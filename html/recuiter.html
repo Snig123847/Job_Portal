@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<%
+if(session.getAttribute("companyemail")!=null)
+{
+	response.sendRedirect("AddJob.jsp");
+}
+else{
+%>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel= "stylesheet" type= "text/css" href= "styles/style.css">
+  <link rel= "stylesheet" type= "text/css" href= "styles/form.css">
+<style>
+.form-field
+{
+	    width: 680px;
+	    margin-bottom: 10px;
+	
+}
+.form-title
+{
+		    margin-bottom: 5px;
+}
+body{
+	background-image:url('styles/indexbg.jpg');
+	background-size:cover;
+	background-attachment:fixed;
+
+}
+.container0 {
+    position: relative;
+    width: 100%;
+
+}
+
+.container0 img {
+    width: 100%;
+
+}
+
+.btn0 {
+
+    position: absolute;
+    top: 80%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn0:hover {
+    background-color: black;
+}
+a{
+    text-decoration: none;
+
+}
+</style>
+</head>
+<body>
+<div id="container">
+  <nav >
+      <ul  style="margin: -30px -5px -30px -5px;">
+          <li><a href="#">Job Portal | New Recruiter</a></li>
+          <li><a href="RecruiterLogin.jsp">Existing Recruiter? Login Here.</a></li>
+      </ul>
+  </nav>
+
+</div>
+
+<div style="background-image:url(''); background-size:cover; background-attachment:fixed; height:100px;">
+<div style="margin-left:300px;margin-top:-30px; padding-top:50px;">
+<form class="form-container" style="margin-top:0px;         min-width: 700px;" action="Scrs/AddRecruiterJS.jsp" method=post>
+<div class="form-title"><h2>Become A Recruiter</h2></div>
+<div class="form-title">Firm Name</div>
+<input class="form-field" type="text" name="companyname" required /><br />
+<div class="form-title">Firm Description</div>
+<input class="form-field" type="text" name="companydesc" required /><br />
+<div class="form-title">Firm Address</div>
+<input class="form-field" type="text" name="companyaddress" required /><br />
+<div class="form-title">Contact Number</div>
+<input class="form-field" type="text" name="companyphone" required /><br />
+<div class="form-title">Enter Login Email</div>
+<input class="form-field" type="text" name="companyemail" required /><br />
+<div class="form-title">Choose Login Password</div>
+<input class="form-field" type="password" name="companypass" required /><br />
+
+
+
+<div class="submit-container">
+<input class="submit-button" type="submit" value="Get Started" />
+</div>
+</form>
+</div>
+</div>
+
+
+</body>
+<%} %></html>
